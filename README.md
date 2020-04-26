@@ -1,4 +1,5 @@
-# SYMFONY BOOTSTRAP
+SYMFONY BOOTSTRAP
+=================
 
 This project run a simple and empty  `symfony-web-skeleton` project thanks to docker and docker-compose.
 This project contains :
