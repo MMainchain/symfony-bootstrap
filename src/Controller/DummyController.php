@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class DummyController extends AbstractController
 {
     /** @Route("/dummy", name="dummy_route") */
-    public function dummy()
+    public function dummy(): Response
     {
         return new Response("Hello world!", Response::HTTP_OK);
     }
