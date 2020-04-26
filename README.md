@@ -2,13 +2,14 @@ SYMFONY BOOTSTRAP
 =================
 
 This project run a simple and empty  `symfony-web-skeleton` project thanks to docker and docker-compose.
-This project contains :
+This project contains:
 
 - PHP `7.4.5`
 - Symfony `4.4`
 - PostgreSQL `9.6`
 
-## Prerequisites
+Prerequisites
+-------------
 
 In order to run this project, you'll need to have installed on your environment:
 
@@ -22,7 +23,8 @@ With the common configuration, make sure nothing is running on the following por
 
 If you cannot empty one of these ports, think about creating a [docker-compose.override.yaml](https://docs.docker.com/compose/extends/) file.
 
-## Usage
+Usage
+--------
 
 ### Start
 
@@ -37,7 +39,8 @@ Then it will be accessible through `localhost:8000`.
 
 The project is linked to a postgreSQL database, which can handle isolated fixtures from test environement.
 
-### Stop
+Stop
+--------
 
 To stop, run:
 
@@ -45,7 +48,8 @@ To stop, run:
 docker-compose down
 ```
 
-## Testing
+Testing
+-------
 
 Testing using PHPUnit:
 
