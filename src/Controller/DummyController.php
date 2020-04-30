@@ -11,6 +11,6 @@ class DummyController extends AbstractController
     /** @Route("/dummy", name="dummy_route") */
     public function dummy(): Response
     {
-        return new Response("Hello world!", Response::HTTP_OK);
+        return new Response('Hello world!', Response::HTTP_OK);
     }
 }

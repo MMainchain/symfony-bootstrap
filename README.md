@@ -4,7 +4,10 @@ SYMFONY BOOTSTRAP
 This project run a simple and empty  `symfony-web-skeleton` project thanks to docker and docker-compose.
 This project contains:
 
-- PHP `7.4.5`
+- PHP `7.4.5` with
+    - PHPUnit
+    - PHP CS Fixer
+    - PHPStan
 - Symfony `4.4`
 - PostgreSQL `9.6`
 
@@ -61,3 +64,15 @@ You can see your code coverage report in `./build/coverage/index.html` thanks to
 
 Note that the test database is completely isolated from dev database.
 In addition, the database is reset after every test case thanks to `dama/doctrine-test-bundle`.
+
+You can also check your code lint by running:
+
+```bash
+docker-compose exec php make lint
+```
+
+To correct cs-fixer errors, run the following:
+
+```bash
+docker-compose exec php vendor/bin/php-cs-fixer fix --diff --using-cache no --ansi
+```

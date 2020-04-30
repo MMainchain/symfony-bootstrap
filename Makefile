@@ -10,6 +10,11 @@ composer.lock.installed: composer.lock
 	composer install
 	touch composer.lock.installed
 
+lint: composer.lock.installed ## Run code lint check
+	composer validate
+	vendor/bin/php-cs-fixer fix --diff --dry-run --using-cache no --ansi
+	vendor/bin/phpstan analyze -l7 --no-progress  ./src --ansi
+
 test: composer.lock.installed ## Run test suite
 	APP_ENV=test ./bin/console doctrine:database:create --if-not-exists
 	APP_ENV=test ./bin/console doctrine:migrations:up-to-date || APP_ENV=test ./bin/console doctrine:migrations:migrate -n -q
